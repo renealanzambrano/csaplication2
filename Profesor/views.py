@@ -55,4 +55,4 @@ class ProfesorDetail(APIView):
     def delete(self, request, pk, format=None):
         profesor = self.get_object(pk)
         profesor.delete()
-        return Response('eliminado',status=status.HTTP_204_NO_CONTENT)
+        return Response('eliminado')

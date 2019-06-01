@@ -43,9 +43,9 @@ class AlumnoDetail(APIView):
             serializer.save()
             return Response(serializer.data)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-        
+
     def delete(self, request, pk, format=None):
         alumno = self.get_object(pk)
         alumno.delete()
-        return Response('eliminado',status=status.HTTP_204_NO_CONTENT)
+        return Response('eliminado')
 
