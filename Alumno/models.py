@@ -7,11 +7,11 @@ from django.utils import timezone
 from Profesor.models import Profesor
 
 class Alumno(models.Model):
-    profesorAsig = models.ForeignKey(Profesor, on_delete = models.SET(-1))
+    profesor_matricula = models.ForeignKey(Profesor, on_delete = models.SET(-1))
     address = models.CharField(max_length=250, null= False)
     name =   models.CharField(max_length=100, null=False)
-    ap_pat = models.CharField(max_length=100, null=False)
-    ap_mat = models.CharField(max_length=100, null=False)
+    apellidoPat = models.CharField(max_length=100, null=False)
+    apellidoMat = models.CharField(max_length=100, null=False)
     matricula = models.IntegerField(null=False) 
     materia = models.CharField(max_length=100, null=False)
     telefono = models.IntegerField(null=False) 
